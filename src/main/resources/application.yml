@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+  jpa:
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 562611089424-ae9dvmfs7nmao8v32svmfqa6i6kais33.apps.googleusercontent.com
+            client-secret: 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
+seek:
+  app:
+    jwtSecret: nHIQ44OxhGsTEY1u7ZB+TfcZwGfRlb7y4jzYFeX+9WdVi2qn1BLhCrr88vxJVryt8bOXXmZflt9ps6PGatOFsw==
+    jwtExpirationMs: 86400000
