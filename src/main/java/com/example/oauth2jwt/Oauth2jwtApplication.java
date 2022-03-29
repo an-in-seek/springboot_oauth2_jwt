@@ -1,6 +1,5 @@
 package com.example.oauth2jwt;
 
-import com.example.oauth2jwt.common.enums.UserRoleType;
 import com.example.oauth2jwt.user.entity.UserRole;
 import com.example.oauth2jwt.user.repository.UserRoleRepository;
 import org.springframework.boot.CommandLineRunner;

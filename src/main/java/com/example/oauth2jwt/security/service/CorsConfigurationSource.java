@@ -7,17 +7,20 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 @Component
 public class CorsConfigurationSource {
 
-    private CorsConfiguration configuration;
-    private UrlBasedCorsConfigurationSource source;
+    private final CorsConfiguration configuration;
+    private final UrlBasedCorsConfigurationSource source;
+
+    public CorsConfigurationSource() {
+        this.configuration = new CorsConfiguration();
+        this.source = new UrlBasedCorsConfigurationSource();
+    }
 
     public UrlBasedCorsConfigurationSource getSource() {
-        configuration = new CorsConfiguration();
-        configuration.addAllowedOrigin(CorsConfiguration.ALL); // (3)
-        configuration.addAllowedMethod(CorsConfiguration.ALL); // (3)
-        configuration.addAllowedHeader(CorsConfiguration.ALL); // (3)
+        configuration.addAllowedOrigin(CorsConfiguration.ALL);
+        configuration.addAllowedMethod(CorsConfiguration.ALL);
+        configuration.addAllowedHeader(CorsConfiguration.ALL);
         configuration.setMaxAge(3600L);
-        source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration); // (4)
+        source.registerCorsConfiguration("/**", configuration);
         return source;
     }
 }
