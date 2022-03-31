@@ -24,7 +24,26 @@ spring:
           google:
             client-id: 562611089424-ae9dvmfs7nmao8v32svmfqa6i6kais33.apps.googleusercontent.com
             client-secret: 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
-seek:
-  app:
-    jwtSecret: nHIQ44OxhGsTEY1u7ZB+TfcZwGfRlb7y4jzYFeX+9WdVi2qn1BLhCrr88vxJVryt8bOXXmZflt9ps6PGatOFsw==
-    jwtExpirationMs: 86400000
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - email
+              - profile
+app:
+  auth:
+    jwt-secret: nHIQ44OxhGsTEY1u7ZB+TfcZwGfRlb7y4jzYFeX+9WdVi2qn1BLhCrr88vxJVryt8bOXXmZflt9ps6PGatOFsw==
+    jwt-expiration-ms: 86400000
+  oauth2:
+    #########################################################################
+    # After successfully authenticating with the OAuth2 Provider,
+    # we'll be generating an auth token for the user and sending the token to the
+    # redirectUri mentioned by the client in the /oauth2/authorize request.
+    # We're not using cookies because they won't work well in mobile clients.
+    #########################################################################
+    # OAuth2 공급자로 성공적으로 인증 한 후 사용자에 대한 인증 토큰을 생성하고 토큰을
+    # 프론트 엔드 클라이언트가 /oauth2/authorize 요청에서 지정한 redirectUri입니다.
+    # 쿠키는 모바일 클라이언트에서 잘 작동하지 않기 때문에 사용하지 않습니다.
+    #########################################################################
+    authorized-redirect-uris:
+      - http://localhost:8082/oauth2/redirect
+      - myandroidapp://oauth2/redirect
+      - myiosapp://oauth2/redirect

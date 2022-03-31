@@ -1,10 +1,12 @@
 package com.example.oauth2jwt;
 
+import com.example.oauth2jwt.security.config.AppProperties;
 import com.example.oauth2jwt.user.entity.UserRole;
 import com.example.oauth2jwt.user.repository.UserRoleRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
@@ -14,6 +16,7 @@ import static com.example.oauth2jwt.common.enums.UserRoleType.ROLE_USER;
 
 @EnableJpaAuditing
 @SpringBootApplication
+@EnableConfigurationProperties(value = {AppProperties.class})
 public class Oauth2jwtApplication {
 
 	public static void main(String[] args) {

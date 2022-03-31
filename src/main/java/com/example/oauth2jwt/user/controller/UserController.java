@@ -1,5 +1,7 @@
 package com.example.oauth2jwt.user.controller;
 
+import com.example.oauth2jwt.security.annotation.CurrentUser;
+import com.example.oauth2jwt.security.user.UserPrincipal;
 import com.example.oauth2jwt.user.dto.UserDto;
 import com.example.oauth2jwt.user.entity.User;
 import com.example.oauth2jwt.user.map.UserMapStruct;
@@ -20,14 +22,13 @@ public class UserController {
     @PostMapping
     public ResponseEntity<?> postUser(@RequestBody UserDto userDto) {
         User user = userMapStruct.toEntity(userDto);
-        userService.save(user);
-        UserDto responseUserDto = userMapStruct.toDto(user);
+        UserDto responseUserDto = userMapStruct.toDto(userService.save(user));
         return new ResponseEntity<>(responseUserDto, HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<?> getUser(@PathVariable("id") Long id) {
-        User user = userService.findById(id);
+    @GetMapping
+    public ResponseEntity<?> getUser(@CurrentUser UserPrincipal principal) {
+        User user = userService.findById(principal.getId());
         UserDto userDto = userMapStruct.toDto(user);
         return new ResponseEntity<>(userDto, HttpStatus.OK);
     }

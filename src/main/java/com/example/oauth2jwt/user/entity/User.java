@@ -31,7 +31,7 @@ public class User extends BaseDateTimeEntity {
     private String email;
 
     @Column
-    private String profileImage;
+    private String imageUrl;
 
     @Column
     private String principal;
@@ -45,12 +45,12 @@ public class User extends BaseDateTimeEntity {
     private Set<UserRole> roles;
 
     @Builder
-    public User(Long id, String username, String password, String email, String profileImage, String principal, SocialType socialType, Set<UserRole> roles) {
+    public User(Long id, String username, String password, String email, String imageUrl, String principal, SocialType socialType, Set<UserRole> roles) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
-        this.profileImage = profileImage;
+        this.imageUrl = imageUrl;
         this.principal = principal;
         this.socialType = socialType;
         this.roles = roles;

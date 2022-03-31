@@ -23,7 +23,7 @@ public class UserDto {
 
     private String email;
 
-    private String profileImage;
+    private String imageUrl;
 
     @Size(max = 4000)
     private String principal;

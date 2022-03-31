@@ -1,7 +1,11 @@
 package com.example.oauth2jwt.common.enums;
 
 public enum SocialType {
-    FACEBOOK("facebook"), GOOGLE("google"), KAKAO("kakao");
+    LOCAL("local"),
+    FACEBOOK("facebook"),
+    GOOGLE("google"),
+    KAKAO("kakao"),
+    GITHUB("github");
     private final String ROLE_PREFIX = "ROLE_";
     private String name;
     SocialType(String name) { this.name = name; }

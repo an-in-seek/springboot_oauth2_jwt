@@ -1,5 +1,6 @@
 package com.example.oauth2jwt.user.service;
 
+import com.example.oauth2jwt.common.exception.ResourceNotFoundException;
 import com.example.oauth2jwt.user.entity.User;
 import com.example.oauth2jwt.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -12,13 +13,11 @@ public class UserService {
     private final UserRepository userRepository;
 
     public User findById(Long id) {
-        User user = userRepository.findById(id).orElse(null);
-        return user;
+        return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
     }
 
     public User save(User user) {
-        userRepository.save(user);
-        return user;
+        return userRepository.save(user);
     }
 
     public void deleteById(Long id) {
