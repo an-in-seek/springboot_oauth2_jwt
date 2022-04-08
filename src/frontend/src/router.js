@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import Vuestagram from './views/Vuestagram.vue';
 import Login from './views/Login.vue';
-import Register from './views/Register.vue';
 import OAuth2RedirectHandler from './views/OAuth2RedirectHandler.vue';
 
 Vue.use(Router);
@@ -21,10 +19,6 @@ export const router = new Router({
       component: Home
     },
     {
-      path: '/vuestagram',
-      component: Vuestagram
-    },
-    {
       path: '/login',
       component: Login
     },
@@ -33,76 +27,28 @@ export const router = new Router({
       component: OAuth2RedirectHandler
     },
     {
-      path: '/register',
-      component: Register
-    },
-    {
       path: '/profile',
-      name: 'profile',
+      name: 'get user profile info',
       // lazy-loaded
       component: () => import('./views/Profile.vue')
     },
     {
-      path: '/admin',
-      name: 'admin',
+      path: '/boards',
+      name: 'get board list',
       // lazy-loaded
-      component: () => import('./views/BoardAdmin.vue')
+      component: () => import('./views/BoardList.vue')
     },
     {
-      path: '/admin/board/detail',
-      name: 'adminBoardDetailNewRegister',
+      path: '/board',
+      name: 'get board info',
       // lazy-loaded
-      component: () => import('./views/BoardAdminDetail.vue')
+      component: () => import('./views/Board.vue')
     },
     {
-      path: '/admin/board/detail/:boardNo',
-      name: 'adminBoardDetail',
+      path: '/board/:id',
+      name: 'get board info by id',
       // lazy-loaded
-      component: () => import('./views/BoardAdminDetail.vue')
-    },
-    {
-      path: '/mod',
-      name: 'moderator',
-      // lazy-loaded
-      component: () => import('./views/BoardModerator.vue')
-    },
-    {
-      path: '/user',
-      name: 'user',
-      // lazy-loaded
-      component: () => import('./views/BoardUser.vue')
-    },
-    {
-      path: '/user/board/detail',
-      name: 'userBoardDetailNewRegister',
-      // lazy-loaded
-      component: () => import('./views/BoardUserDetail.vue')
-    },
-    {
-      path: '/user/board/detail/:boardNo',
-      name: 'userBoardDetail',
-      // lazy-loaded
-      component: () => import('./views/BoardUserDetail.vue')
-    },
-    {
-      path: '/post/detail',
-      name: 'postDetailNewRegister',
-      // lazy-loaded
-      component: () => import('./views/PostDetail.vue')
+      component: () => import('./views/Board.vue')
     }
   ]
 });
-
-// router.beforeEach((to, from, next) => {
-//   const publicPages = ['/login', '/register', '/home'];
-//   const authRequired = !publicPages.includes(to.path);
-//   const loggedIn = localStorage.getItem('user');
-
-//   // trying to access a restricted page + not logged in
-//   // redirect to login page
-//   if (authRequired && !loggedIn) {
-//     next('/login');
-//   } else {
-//     next();
-//   }
-// });

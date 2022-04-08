@@ -1,7 +1,7 @@
-package com.example.oauth2jwt.user.service;
+package com.example.oauth2jwt.security.service;
 
 import com.example.oauth2jwt.common.exception.ResourceNotFoundException;
-import com.example.oauth2jwt.security.user.UserPrincipal;
+import com.example.oauth2jwt.security.dto.UserPrincipal;
 import com.example.oauth2jwt.user.entity.User;
 import com.example.oauth2jwt.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

@@ -5,7 +5,13 @@
         <strong>{{ currentUser.username }}</strong> Profile
       </h3>
     </header>
-    <p>
+    <div>
+      <p>
+        <strong>Image:</strong>
+      </p>
+      <img :src="currentUser.imageUrl" />
+    </div>
+    <p class="token">
       <strong>Token:</strong>
       {{ currentUser.accessToken }}
     </p>
@@ -34,7 +40,6 @@
 
 <script>
 import User from '../models/user';
-import UserService from '../services/user.service';
 export default {
   name: 'Profile',
   data() {
@@ -43,20 +48,13 @@ export default {
     }
   },
   mounted() {
-    // 엑세스 토큰으로 사용자 정보 조회
-    UserService.getUser()
-      .then(
-        response => {
-          Object.assign(this.currentUser, response.data);
-          this.currentUser.accessToken = this.$store.state.auth.user.accessToken;
-          if (!this.currentUser) {
-            this.$router.push('/login');
-          }
-        },
-        error => {
-          alert((error.response && error.response.data.message) || error.message || error.toString());
-        }
-      );
+    this.currentUser = this.$store.state.auth.user;
   }
 };
 </script>
+
+<style scoped>
+.token {
+  word-break: break-all;
+}
+</style>

@@ -4,9 +4,9 @@ import com.example.oauth2jwt.security.oauth2.exception.OAuth2AuthenticationProce
 
 import java.util.Map;
 
-import static com.example.oauth2jwt.common.enums.SocialType.GOOGLE;
-import static com.example.oauth2jwt.common.enums.SocialType.FACEBOOK;
-import static com.example.oauth2jwt.common.enums.SocialType.GITHUB;
+import static com.example.oauth2jwt.security.oauth2.enums.SocialType.GOOGLE;
+import static com.example.oauth2jwt.security.oauth2.enums.SocialType.FACEBOOK;
+import static com.example.oauth2jwt.security.oauth2.enums.SocialType.GITHUB;
 
 public class OAuth2UserInfoFactory {
 

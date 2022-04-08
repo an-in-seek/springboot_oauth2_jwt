@@ -1,11 +1,11 @@
 package com.example.oauth2jwt.security.oauth2.service;
 
-import com.example.oauth2jwt.common.enums.SocialType;
+import com.example.oauth2jwt.security.oauth2.enums.SocialType;
 import com.example.oauth2jwt.common.enums.UserRoleType;
 import com.example.oauth2jwt.security.oauth2.exception.OAuth2AuthenticationProcessingException;
 import com.example.oauth2jwt.security.oauth2.user.OAuth2UserInfo;
 import com.example.oauth2jwt.security.oauth2.user.OAuth2UserInfoFactory;
-import com.example.oauth2jwt.security.user.UserPrincipal;
+import com.example.oauth2jwt.security.dto.UserPrincipal;
 import com.example.oauth2jwt.user.entity.User;
 import com.example.oauth2jwt.user.entity.UserRole;
 import com.example.oauth2jwt.user.repository.UserRepository;

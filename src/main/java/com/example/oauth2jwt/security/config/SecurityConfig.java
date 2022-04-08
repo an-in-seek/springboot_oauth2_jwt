@@ -7,7 +7,7 @@ import com.example.oauth2jwt.security.oauth2.repository.HttpCookieOAuth2Authoriz
 import com.example.oauth2jwt.security.jwt.service.AuthEntryPointJwt;
 import com.example.oauth2jwt.security.service.CorsConfigurationSource;
 import com.example.oauth2jwt.security.oauth2.service.CustomOAuth2UserService;
-import com.example.oauth2jwt.user.service.UserDetailsServiceImpl;
+import com.example.oauth2jwt.security.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

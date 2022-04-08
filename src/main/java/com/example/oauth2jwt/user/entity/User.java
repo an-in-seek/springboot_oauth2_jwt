@@ -1,7 +1,7 @@
 package com.example.oauth2jwt.user.entity;
 
 import com.example.oauth2jwt.common.entity.BaseDateTimeEntity;
-import com.example.oauth2jwt.common.enums.SocialType;
+import com.example.oauth2jwt.security.oauth2.enums.SocialType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,9 +10,9 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Set;
 
-@Setter
-@Getter
 @Entity
+@Getter
+@Setter
 @NoArgsConstructor
 public class User extends BaseDateTimeEntity {
 

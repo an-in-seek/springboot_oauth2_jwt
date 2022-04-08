@@ -1,7 +1,7 @@
 package com.example.oauth2jwt.user.controller;
 
 import com.example.oauth2jwt.security.annotation.CurrentUser;
-import com.example.oauth2jwt.security.user.UserPrincipal;
+import com.example.oauth2jwt.security.dto.UserPrincipal;
 import com.example.oauth2jwt.user.dto.UserDto;
 import com.example.oauth2jwt.user.entity.User;
 import com.example.oauth2jwt.user.map.UserMapStruct;

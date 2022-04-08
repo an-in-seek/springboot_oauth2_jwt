@@ -27,9 +27,6 @@ import {
   faEllipsisH,
   faPlus
 } from '@fortawesome/free-solid-svg-icons';
-import CommentForm from './views/components/CommentForm';
-import CommentList from './views/components/CommentList';
-import InfiniteLoading from 'vue-infinite-loading';
 
 library.add(faHome, faUser, faUserPlus, faSignInAlt, faSignOutAlt, faList, faAddressCard, faHeart, faHeartBroken, faComment, faShareAlt, faEllipsisH, faPlus);
 
@@ -49,13 +46,7 @@ Vue.use(VeeValidate, {
 Vue.use(Vuex);
 // Install VueMoment
 Vue.use(VueMomentJS, moment);
-// Install InfiniteLoading
-Vue.use(InfiniteLoading);
-
 Vue.component('font-awesome-icon', FontAwesomeIcon);
-Vue.component(CommentForm.name, CommentForm);
-Vue.component(CommentList.name, CommentList);
-
 new Vue({
   router,
   store,

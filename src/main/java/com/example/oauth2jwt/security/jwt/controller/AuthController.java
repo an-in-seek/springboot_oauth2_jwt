@@ -1,7 +1,7 @@
 package com.example.oauth2jwt.security.jwt.controller;
 
 import com.example.oauth2jwt.common.dto.MessageResponse;
-import com.example.oauth2jwt.common.enums.SocialType;
+import com.example.oauth2jwt.security.oauth2.enums.SocialType;
 import com.example.oauth2jwt.common.exception.BadRequestException;
 import com.example.oauth2jwt.security.jwt.dto.JwtResponse;
 import com.example.oauth2jwt.security.oauth2.dto.LoginRequest;

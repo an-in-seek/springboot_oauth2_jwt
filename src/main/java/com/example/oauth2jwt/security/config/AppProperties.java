@@ -7,8 +7,8 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 import java.util.List;
 
 @Getter
-@RequiredArgsConstructor
 @ConstructorBinding
+@RequiredArgsConstructor
 @ConfigurationProperties(prefix = "app")
 public class AppProperties {
 

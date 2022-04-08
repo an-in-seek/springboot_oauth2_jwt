@@ -46,15 +46,14 @@
           <blockquote class="blockquote mb-0">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
             <footer class="blockquote-footer">
-              Someone famous in <cite title="Source Title">Source Title</cite>
+              Someone famous in
+              <cite title="Source Title">Source Title</cite>
             </footer>
           </blockquote>
         </b-card>
 
         <b-card title="Title" img-src="https://placekitten.com/500/350" img-alt="Image" img-top>
-          <b-card-text>
-            This card has supporting text below as a natural lead-in to additional content.
-          </b-card-text>
+          <b-card-text>This card has supporting text below as a natural lead-in to additional content.</b-card-text>
           <b-card-text class="small text-muted">Last updated 3 mins ago</b-card-text>
         </b-card>
 
@@ -62,16 +61,17 @@
           <blockquote class="card-blockquote">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
             <footer>
-              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+              <small>
+                Someone famous in
+                <cite title="Source Title">Source Title</cite>
+              </small>
             </footer>
           </blockquote>
         </b-card>
 
         <b-card>
           <b-card-title>Title</b-card-title>
-          <b-card-text>
-            This card has supporting text below as a natural lead-in to additional content.
-          </b-card-text>
+          <b-card-text>This card has supporting text below as a natural lead-in to additional content.</b-card-text>
           <b-card-text class="small text-muted">Last updated 3 mins ago</b-card-text>
         </b-card>
 
@@ -92,15 +92,14 @@
     <div class="pt-4 mt-4">
       <hr />
       <div class="text-center py-3">
-          &copy; 2020 Copyright: <a href="#"> Community.com </a>
+        &copy; 2020 Copyright:
+        <a href="#">Community.com</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import UserService from '../services/user.service';
-
 export default {
   name: 'Home',
   data() {
@@ -110,25 +109,12 @@ export default {
       sliding: null
     };
   },
-  mounted() {
-    UserService.getPublicContent().then(
-      response => {
-        this.content = response.data;
-      },
-      error => {
-        this.content =
-          (error.response && error.response.data.message) ||
-          error.message ||
-          error.toString();
-      }
-    );
-  },
-  methods : {
+  methods: {
     onSlideStart() {
-        this.sliding = true
+      this.sliding = true
     },
     onSlideEnd() {
-        this.sliding = false
+      this.sliding = false
     }
   }
 };

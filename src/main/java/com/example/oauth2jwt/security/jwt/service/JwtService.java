@@ -1,13 +1,12 @@
 package com.example.oauth2jwt.security.jwt.service;
 
 import com.example.oauth2jwt.security.config.AppProperties;
-import com.example.oauth2jwt.security.user.UserPrincipal;
+import com.example.oauth2jwt.security.dto.UserPrincipal;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.stereotype.Service;
 
 import javax.crypto.SecretKey;
@@ -32,7 +31,7 @@ public class JwtService {
         Object principal = authentication.getPrincipal();
         UserPrincipal userPrincipal = (UserPrincipal) principal;
         String id = String.valueOf(userPrincipal.getId());
-        log.info(String.valueOf(id));
+        // log.info(String.valueOf(id));
         // String username = userPrincipal.getUsername();
         // log.info(username);
         return Jwts.builder()

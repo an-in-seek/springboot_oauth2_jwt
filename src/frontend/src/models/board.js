@@ -1,12 +1,12 @@
 export default class Board {
-    constructor(boardNo, username, boardTitle, boardSubTitle, boardContent, boardType, comments) {
-      this.boardNo = boardNo;
-      this.username = username;
-      this.boardTitle = boardTitle;
-      this.boardSubTitle = boardSubTitle;
-      this.boardContent = boardContent;
+    constructor(id, username, title, content, boardType, createdDate, updatedDate) {
+      this.id = id;
+      this.user = { username }
+      this.title = title;
+      this.content = content;
       this.boardType = boardType;
-      this.comments = comments;
+      this.createdDate = createdDate;
+      this.updatedDate = updatedDate;
     }
   }
   

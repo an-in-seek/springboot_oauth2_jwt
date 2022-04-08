@@ -1,4 +1,4 @@
-package com.example.oauth2jwt.common.enums;
+package com.example.oauth2jwt.security.oauth2.enums;
 
 public enum SocialType {
     LOCAL("local"),
@@ -6,8 +6,10 @@ public enum SocialType {
     GOOGLE("google"),
     KAKAO("kakao"),
     GITHUB("github");
+
     private final String ROLE_PREFIX = "ROLE_";
-    private String name;
+    private final String name;
+
     SocialType(String name) { this.name = name; }
     public String getRoleType() { return ROLE_PREFIX + name.toUpperCase(); }
     public String getValue() { return name; }

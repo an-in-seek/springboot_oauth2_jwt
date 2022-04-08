@@ -1,12 +1,19 @@
 <template>
-    <div></div>
+    <br />
 </template>
 <script>
 import Constant from '../constant'
+import User from '../models/user';
+import UserService from '../services/user.service';
 export default {
     name: 'OAuth2RedirectHandler',
+    data() {
+        return {
+            currentUser: new User()
+        }
+    },
     created() {
-        this.render();
+        this.validateAccessToken();
     },
     methods: {
         getUrlParameter(key) {
@@ -15,14 +22,25 @@ export default {
             const results = regex.exec(location.search);
             return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         },
-        render() {
+        validateAccessToken() {
             const accessToken = this.getUrlParameter('token');
             if (accessToken) {
                 localStorage.setItem(Constant.USER, JSON.stringify({ accessToken }));
-                location.href = "/profile";
+                UserService.getUser()
+                    .then(
+                        response => {
+                            Object.assign(this.currentUser, response.data);
+                            this.currentUser.accessToken = accessToken;
+                            localStorage.setItem(Constant.USER, JSON.stringify(this.currentUser));
+                            location.href = "/profile";
+                        },
+                        error => {
+                            alert.log(error);
+                        }
+                    );
             } else {
                 const error = this.getUrlParameter('error');
-                console.log(error);
+                alert.log(error);
                 this.$router.push('/login');
             }
         }

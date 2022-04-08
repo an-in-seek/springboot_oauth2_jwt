@@ -1,4 +1,4 @@
-package com.example.oauth2jwt.security.user;
+package com.example.oauth2jwt.security.dto;
 
 import com.example.oauth2jwt.user.entity.User;
 import lombok.Builder;
