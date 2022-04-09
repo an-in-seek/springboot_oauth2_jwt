@@ -1,7 +1,7 @@
 ## Vue + SpringBoot + SpringBootSecurity + OAuth2 + JWT + REST API
 
 개인 블로그 링크: https://blog.naver.com/dktmrorl/222688441049
-
+------------
 ### Vue
 npm i @fortawesome/fontawesome-svg-core  
 npm i @fortawesome/free-solid-svg-icons  
@@ -16,5 +16,5 @@ npm i vue-infinite-loading
 npm i vue-moment  
 npm i vue-router  
 npm i vuex
-
+------------
 ### SpringBoot
