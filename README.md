@@ -20,7 +20,7 @@ npm i vuex
 ```
 
 ### SpringBoot
-OAuth2  
-JWT  
-SpringBootSecurity  
-REST API
+- OAuth2  
+- JWT  
+- SpringBootSecurity  
+- REST API
