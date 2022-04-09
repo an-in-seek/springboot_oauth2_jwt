@@ -1,6 +1,6 @@
 ## Vue + OAuth2 + JWT + SpringBootSecurity
 
-개인 블로그 링크: https://blog.naver.com/dktmrorl/222688441049
+[개인 블로그 링크](https://blog.naver.com/dktmrorl/222688441049)
 
 ### Vue
 ```
