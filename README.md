@@ -1,4 +1,4 @@
-## Vue + SpringBoot + SpringBootSecurity + OAuth2 + JWT + REST API
+## Vue + SpringBootSecurity + OAuth2 + JWT + REST API
 
 개인 블로그 링크: https://blog.naver.com/dktmrorl/222688441049
 
