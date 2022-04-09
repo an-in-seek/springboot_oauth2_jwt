@@ -1,8 +1,6 @@
-# springboot_oauth2_jwt
+# SpringBoot + SpringBootSecurity + OAuth2 + JWT + REST API
 
-## SpringBoot + SpringBootSecurity + OAuth2 + JWT + REST API
-
-### Vue
+## Vue
 npm i @fortawesome/fontawesome-svg-core  
 npm i @fortawesome/free-solid-svg-icons  
 npm i @fortawesome/vue-fontawesome  
@@ -17,4 +15,4 @@ npm i vue-moment
 npm i vue-router  
 npm i vuex
 
-### SpringBoot
+## SpringBoot
