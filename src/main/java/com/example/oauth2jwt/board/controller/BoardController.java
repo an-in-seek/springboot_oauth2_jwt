@@ -7,6 +7,7 @@ import com.example.oauth2jwt.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class BoardController {
     private final BoardMapStruct boardMapStruct;
 
     @PostMapping
-    public ResponseEntity<?> postBoard(@RequestBody BoardDto boardDto) {
+    public ResponseEntity<?> postBoard(@Validated @RequestBody BoardDto boardDto) {
         Board savedBoard = boardService.save(boardDto);
         BoardDto savedBoardDto = boardMapStruct.toDto(savedBoard);
         return new ResponseEntity<>(savedBoardDto, HttpStatus.CREATED);
@@ -45,7 +46,7 @@ public class BoardController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> putBoard(@PathVariable Long id, @RequestBody BoardDto boardDto) {
+    public ResponseEntity<?> putBoard(@PathVariable Long id, @Validated @RequestBody BoardDto boardDto) {
         Board updatedBoard = boardService.updateById(id, boardDto);
         BoardDto updatedBoardDto = boardMapStruct.toDto(updatedBoard);
         return new ResponseEntity<>(updatedBoardDto, HttpStatus.OK);

@@ -2,7 +2,6 @@ package com.example.oauth2jwt.board.dto;
 
 import com.example.oauth2jwt.board.annotation.BoardType;
 import com.example.oauth2jwt.user.dto.UserDto;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -17,14 +16,13 @@ public class BoardDto {
     private final Long id;
 
     @NotBlank
-    @Size(max = 10)
+    @Size(max = 50)
     private final String title;
 
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 200)
     private final String content;
 
-    @NotBlank
     private final BoardType boardType;
 
     private final UserDto user;
