@@ -1,4 +1,4 @@
-# SpringBoot + SpringBootSecurity + OAuth2 + JWT + REST API
+# Vue + SpringBoot + SpringBootSecurity + OAuth2 + JWT + REST API
 
 ## Vue
 npm i @fortawesome/fontawesome-svg-core  
