@@ -1,4 +1,4 @@
-const FRONT_BASE_URL = 'http://localhost:8082';
+const FRONT_BASE_URL = 'http://localhost:80';
 const API_BASE_URL = 'http://localhost:8080';
 const USER = "user";
 const ACCESS_TOKEN = "accessToken";
