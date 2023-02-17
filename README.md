@@ -6,19 +6,19 @@
 
 ### Vue
 ```
-npm i @fortawesome/fontawesome-svg-core  
-npm i @fortawesome/free-solid-svg-icons  
-npm i @fortawesome/vue-fontawesome  
-npm install axios  
-npm install bootstrap  
-npm i bootstrap-vue  
-npm i moment  
-npm i vee-validate  
-npm i vue-google-oauth2  
-npm i vue-infinite-loading  
-npm i vue-moment  
-npm i vue-router  
-npm i vuex
+sudo npm i @fortawesome/fontawesome-svg-core  
+sudo npm i @fortawesome/free-solid-svg-icons  
+sudo npm i @fortawesome/vue-fontawesome  
+sudo npm install axios  
+sudo npm install bootstrap  
+sudo npm i bootstrap-vue  
+sudo npm i moment  
+sudo npm i vee-validate  
+sudo npm i vue-google-oauth2  
+sudo npm i vue-infinite-loading  
+sudo npm i vue-moment  
+sudo npm i vue-router  
+sudo npm i vuex
 ```
 
 ### SpringBoot
