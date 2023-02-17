@@ -1,5 +1,5 @@
 const FRONT_BASE_URL = 'http://seek316.duckdns.org';
-const API_BASE_URL = 'http://seek316.duckdns.org:8080';
+const API_BASE_URL = 'http://seek316.duckdns.org';
 const USER = "user";
 const ACCESS_TOKEN = "accessToken";
 const OAUTH2_REDIRECT_URI = `${FRONT_BASE_URL}/oauth2/redirect`;
